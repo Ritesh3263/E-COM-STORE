@@ -24,7 +24,7 @@ const HeroSection = () => {
           <div className="hero-section-image">
             <figure>
               <img
-                src="/Images\hero.jpg" 
+                src={require("../../Assets/hero.jpg")} 
                 alt="hero-section-hoto"
                 className="img-style"
               />

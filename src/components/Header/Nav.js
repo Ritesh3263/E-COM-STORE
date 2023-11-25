@@ -3,9 +3,10 @@ import './Nav.css'
 import { NavLink } from 'react-router-dom'
 import { FaTwitter,FaInstagram,FaFacebook,FaLinkedin, FaShoppingCart, FaBars  } from "react-icons/fa";
 import { useAuth0 } from '@auth0/auth0-react';
+import { useCartContext } from '../../context/cart_context';
 const Nav = () => {
 	// const [menuIcon, setMenuIcon] = useState();
-	// const { total_item } = useCartContext();
+	const { total_item } = useCartContext();
 	const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
   return (
     <> 
@@ -50,15 +51,16 @@ const Nav = () => {
 				
 			) : (
 				
-					<button className='btn btn-primary btn-lg order-lg-last' onClick={() => loginWithRedirect()}>Log In</button>
+				<button className='btn btn-primary btn-lg order-lg-last' onClick={() => loginWithRedirect()}>Log In</button>
 
-				
-				
 			)}
 
 				
-
-            <FaShoppingCart className="mx-4 order-sm-start order-lg-last" />
+			<NavLink to="/cart" className="mx-5 navbar-link cart-trolley--link order-lg-last">
+              <FaShoppingCart className="cart-trolley" />
+              <span className="cart-total--item"> {total_item} </span>
+            </NavLink>
+            {/* <FaShoppingCart className="mx-4 order-sm-start cart-trolley order-lg-last" /> */}
 	      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <FaBars className='mb-1' /> Menu
 	      </button>
