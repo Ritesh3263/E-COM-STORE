@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/E-COM-STORE/static/css/main.f36f2180.css",
+    "main.js": "/E-COM-STORE/static/js/main.594e5c80.js",
+    "static/js/787.b45b619e.chunk.js": "/E-COM-STORE/static/js/787.b45b619e.chunk.js",
+    "static/media/hero.jpg": "/E-COM-STORE/static/media/hero.b586ec90be71b6bea8cf.jpg",
+    "index.html": "/E-COM-STORE/index.html",
+    "main.f36f2180.css.map": "/E-COM-STORE/static/css/main.f36f2180.css.map",
+    "main.594e5c80.js.map": "/E-COM-STORE/static/js/main.594e5c80.js.map",
+    "787.b45b619e.chunk.js.map": "/E-COM-STORE/static/js/787.b45b619e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f36f2180.css",
+    "static/js/main.594e5c80.js"
+  ]
+}
