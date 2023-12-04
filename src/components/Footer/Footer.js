@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaDiscord, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -15,9 +15,10 @@ const Footer = () => {
             </div>
 
             <div>
-              <button className="btn hireme-btn">
-                <NavLink to="/"> Get Started </NavLink>
-              </button>
+              <a href="#contact">
+              <button className="btn btnPrimary btn-xl hireme-btn">
+                 Get Started 
+              </button></a>
             </div>
           </div>
         </section>
@@ -26,38 +27,38 @@ const Footer = () => {
         <footer>
           <div className="container grid grid-four-column">
             <div className="footer-about">
-              <h3>Thapa Technical</h3>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+              <h3>Daptar.com</h3>
+              <p>Daptar.com is your dedicated partner in education, seamlessly providing innovative schooling solutions.</p>
             </div>
             <div className="footer-subscribe">
               <h3>Subscribe to get important updates</h3>
               <form action="#">
-                <input type="email" name="email" placeholder="YOUR E-MAIL" />
+                <input className="w-100" type="email" name="email" placeholder="YOUR E-MAIL" />
 
-                <input type="submit" value="subscribe" />
+                <input className="btn btnSecondary" type="submit" value="subscribe" />
               </form>
             </div>
             <div className="footer-social">
               <h3>Follow Us</h3>
               <div className="footer-social--icons">
                 <div>
-                  <FaDiscord className="icons" />
+                  <FaYoutube className="icons" />
                 </div>
                 <div>
                   <FaInstagram className="icons" />
                 </div>
                 <div>
                   <a
-                    href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
+                    href="https://www.linkedin.com/in/ritesh-kubde-762730173/"
                     target="_blank" rel="noreferrer">
-                    <FaYoutube className="icons" />
+                    <FaLinkedin className="icons" />
                   </a>
                 </div>
               </div>
             </div>
             <div className="footer-contact">
               <h3>Call Us</h3>
-              <h3>+91 12345678978</h3>
+              <h3 className="pointer">+91 9960528020</h3>
             </div>
           </div>
 
@@ -65,11 +66,11 @@ const Footer = () => {
             <hr />
             <div className="container grid grid-two-column ">
               <p>
-                @{new Date().getFullYear()} ThapaTechnical. All Rights Reserved
+                @{new Date().getFullYear()} Daptar.com. All Rights Reserved
               </p>
               <div>
-                <p>PRIVACY POLICY</p>
-                <p>TERMS & CONDITIONS</p>
+                <p className="pointer">PRIVACY POLICY</p>
+                <p className="pointer">TERMS & CONDITIONS</p>
               </div>
             </div>
           </div>
@@ -101,7 +102,10 @@ const Wrapper = styled.section`
 
   footer {
     padding: 14rem 0 9rem 0;
-    background-color: ${({ theme }) => theme.colors.footer_bg};
+    /* background-color: ${({ theme }) => theme.colors.primary}; */
+    background-color: #1f6840;
+    background-image: linear-gradient(270deg, #1f6840 0%, #25a55f 100%);
+
     h3 {
       color: ${({ theme }) => theme.colors.hr};
       margin-bottom: 2.4rem;
@@ -117,7 +121,11 @@ const Wrapper = styled.section`
         padding: 1rem;
         border-radius: 50%;
         border: 2px solid ${({ theme }) => theme.colors.white};
-
+        transition: all ease 0.2s;
+        &:hover{
+          transform:scale(0.9);
+          
+        }
         .icons {
           color: ${({ theme }) => theme.colors.white};
           font-size: 2.4rem;
@@ -136,6 +144,7 @@ const Wrapper = styled.section`
       color: ${({ theme }) => theme.colors.hr};
       height: 0.1px;
     }
+    
   }
 
   @media (max-width: ${({ theme }) => theme.media.mobile}) {

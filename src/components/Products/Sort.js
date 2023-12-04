@@ -13,13 +13,13 @@ const Sort = () => {
         <button
           className={grid_view ? "active sort-btn" : "sort-btn"}
           onClick={setGridView}>
-          <BsFillGridFill className="icon" />
+          <BsFillGridFill className="sort-icon" />
         </button>
 
         <button
           className={!grid_view ? "active sort-btn" : " sort-btn"}
           onClick={setListView}>
-          <BsList className="icon" />
+          <BsList className="sort-icon" />
         </button>
       </div>
       {/* 2nd column  */}
@@ -57,7 +57,8 @@ const Wrapper = styled.section`
 
   .sorting-list--grid {
     display: flex;
-    gap: 2rem;
+    /* gap: 2rem; */
+    border: 2px solid var(--primary);
 
     .sort-btn {
       padding: 0.8rem 1rem;
@@ -68,18 +69,19 @@ const Wrapper = styled.section`
       cursor: pointer;
     }
 
-    .icon {
+    .sort-icon {
       font-size: 1.6rem;
     }
     .active {
-      background-color: ${({ theme }) => theme.colors.black};
+      background-color: var(--primary);
       color: #fff;
     }
   }
 
   .sort-selection .sort-selection--style {
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     cursor: pointer;
+    font-size: 1.3rem;
 
     .sort-select--option {
       padding: 0.5rem 0;

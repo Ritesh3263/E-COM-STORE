@@ -1,0 +1,106 @@
+:root {
+  --primary: #25A55F;
+  --white: #ffffff;
+  --dark: #006F7B;
+  --primaryLight: #E9F6EF;
+  --denger: #ec7063
+}
+
+$component-active-bg: var(--primary) !default;
+$custom-checkbox-indicator-indeterminate-bg: var(--primary) !default;
+
+a{
+  color: var(--primary);
+}
+
+.py-12{
+  padding-top: 12rem ;
+}
+
+.fw-600{
+  font-weight: 600 !important;
+}
+
+.map-shadow{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.color-primary{
+  color: var(--primary);
+}
+
+.heading{
+  font-weight: 900;
+  color: var(--dark);
+  margin-bottom: 2rem;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+}
+
+.btn {
+  
+  // background-color: var(--primary);
+  border-radius: 0;
+  border: 2px solid #1f6840;
+  border-image: linear-gradient(to right, #25a55f, #1f6840) 1;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all ease 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.btnPrimary{
+  color: var(--white);
+  background-color: #1f6840;
+  background-image: linear-gradient(270deg, #1f6840 0%, #25a55f 100%);
+  &:hover{
+    background-color: var(--white) !important;
+    border: 1px solid var(--primary) !important;
+    color: var(--primary) !important;
+    background-image: none;
+    font-weight: 600;
+    transform: scale(0.9);
+  }
+}
+
+.btnSecondary{
+  color: var(--primary) !important;
+  background-image: none;
+  background: none;
+  background-color: var(--white) !important;
+  &:hover{
+    color: var(--white) !important;
+    background-color: #1f6840;
+    background-image: linear-gradient(270deg, #1f6840 0%, #25a55f 100%);
+    transform: scale(0.9);
+  }
+}
+
+.btnDenger{
+  border: none ;
+  transition: all ease 0.2s;
+  &:hover{
+    transform: scale(0.9);
+    background-color: var(--white) !important;
+    border: 1px solid var(--denger) !important;
+    color: var(--denger) !important;
+  }
+}
+
+.btn-xl{
+  font-size: 1.5rem;
+}
+
+

@@ -129,6 +129,7 @@ const FilterSection = () => {
           <FormatPrice price={price} />
         </p>
         <input
+          className="custom-range"
           type="range"
           name="price"
           min={minPrice}
@@ -139,7 +140,7 @@ const FilterSection = () => {
       </div>
 
       <div className="filter-clear">
-        <button className="btn btn-lg text-white" onClick={clearFilters}>
+        <button className="btn btnDenger btn-lg text-white" onClick={clearFilters}>
           Clear Filters
         </button>
       </div>
@@ -222,6 +223,9 @@ const Wrapper = styled.section`
     &:hover {
       opacity: 1;
     }
+    svg{
+      vertical-align: baseline;
+    }
   }
 
   .active {
@@ -229,7 +233,7 @@ const Wrapper = styled.section`
   }
 
   .checkStyle {
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: #fff;
   }
 
@@ -252,6 +256,50 @@ const Wrapper = styled.section`
     background-color: #ec7063;
     color: #000;
   }
+  .custom-range::-webkit-slider-thumb {
+    background: gray;
+  }
+
+  .custom-range::-moz-range-thumb {
+    background: gray;
+  }
+
+  .custom-range::-ms-thumb {
+    background: gray;
+  }
+
+  .custom-range{
+      -webkit-appearance: none;
+      border: none;
+      
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+      height: 5px;
+      background: #ddd;
+      border: none;
+      border-radius: 8px !important;
+  }
+
+  input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border: none;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      background: var(--primary);
+      margin-top: -6px;
+  }
+
+  input[type=range]:focus {
+      outline: none;
+  }
+
+  input[type=range]:focus::-webkit-slider-runnable-track {
+      background: #ccc;
+  }
+
+
 `;
 
 export default FilterSection;

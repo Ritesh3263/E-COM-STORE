@@ -1,13 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
 
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Work Sans", sans-serif;
-}
+  font-family: 'Poppins', sans-serif; }
 
 
 html {
@@ -18,6 +18,7 @@ html {
 }
 
 body {
+  font-family: 'Poppins', sans-serif; 
   overflow-x: hidden;
    scrollbar-color: rgb(98 84 243);
     scrollbar-width: thin;
@@ -43,8 +44,7 @@ h1,
 h2,
 h3,
 h4 {
-   font-family: "Work Sans", sans-serif;
-
+  font-family: 'Poppins', sans-serif; 
 }
 
 h1 {
@@ -77,7 +77,7 @@ a {
   text-decoration: none;
 }
 
-li {
+li,ul {
   list-style: none;
 }
 
@@ -96,6 +96,7 @@ ${"" /* resuable code section  */}
 
 .grid-two-column {
   grid-template-columns: repeat(2, 1fr);
+  
 }
 
 .grid-three-column {
@@ -111,16 +112,17 @@ ${"" /* resuable code section  */}
 }
 
   .common-heading {
-      font-size: 3.8rem;
-      font-weight: 600;
+      /* font-size: 3.8rem; */
+      font-weight: 900;
       margin-bottom: 6rem;
-      text-transform: capitalize;
+      text-transform: uppercase;
+      color: var(--dark);
     }
 
      .intro-data {
-      margin-bottom: 0;
+      /* margin-bottom: 0; */
       text-transform: uppercase;
-      color: #5138ee;
+      color: var(--dark);
     }
 
    .caption {
@@ -147,6 +149,7 @@ input, textarea{
     max-width: 16rem;
     margin-top: 2rem;
     background-color: ${({ theme }) => theme.colors.btn};
+    border: 1px solid ${({ theme }) => theme.colors.btn};
     color: ${({ theme }) => theme.colors.white};
     padding: 1.4rem 2.2rem;
     border-style: solid;
@@ -168,9 +171,9 @@ input, textarea{
       font-size: 50%;
     }
 
-.grid{
-  gap: 3.2rem;
-}
+    .grid{
+      gap: 3.2rem;
+    }
       .grid-two-column , .grid-three-column, .grid-four-column{
           grid-template-columns: 1fr;
         }

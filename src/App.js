@@ -1,6 +1,7 @@
 import React from 'react'
 import {GlobalStyle} from './styledComponents/GlobalStyle'
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.css'
+import "./App.scss"
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './components/Home/Home'
@@ -13,7 +14,7 @@ import ErrorPage from './components/Error/Error'
 import { ThemeProvider } from 'styled-components' 
 import ThemeLight from './styledComponents/ThemeLight'
 import Nav from './components/Header/Nav'
-import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   return (

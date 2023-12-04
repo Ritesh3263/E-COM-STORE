@@ -25,13 +25,13 @@ const SingleProduct = () => {
     company,
     price,
     description,
-    category,
+    // category,
     stock,
     stars,
     reviews,
     image,
   } = singleProduct;
-
+  // console.log(alias);
   useEffect(() => {
     getSingleProduct(`${API}?id=${id}`);
   }, []);
@@ -78,7 +78,7 @@ const SingleProduct = () => {
 
               <div className="product-warranty-data">
                 <TbTruckDelivery className="warranty-icon" />
-                <p>Thapa Delivered </p>
+                <p>Fast Service </p>
               </div>
 
               <div className="product-warranty-data">

@@ -48,7 +48,7 @@ const AddToCart = ({ product }) => {
       />
 
       <NavLink to="/cart" onClick={() => addToCart(id, color, amount, product)}>
-        <button className="btn btn-primary btn-lg">Add To Cart</button>
+        <button className="btn btnPrimary btn-lg">Add To Cart</button>
       </NavLink>
     </Wrapper>
   );
@@ -74,6 +74,9 @@ const Wrapper = styled.section`
     &:hover {
       opacity: 1;
     }
+    svg{
+      vertical-align: baseline;
+    }
   }
 
   .active {
@@ -81,7 +84,7 @@ const Wrapper = styled.section`
   }
 
   .checkStyle {
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: #fff;
   }
 

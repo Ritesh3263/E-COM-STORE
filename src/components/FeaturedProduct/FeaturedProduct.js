@@ -98,7 +98,7 @@ const Wrapper = styled.section`
     }
 
     .card-data--price {
-      color: ${({ theme }) => theme.colors.helper};
+      color: var(--primary);
     }
 
     .btn {

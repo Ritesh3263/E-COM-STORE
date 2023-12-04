@@ -59,7 +59,7 @@ const Wrapper = styled.section`
   }
 
   .card {
-    background-color: ${({ theme }) => theme.colors.bg};
+    /* background-color: ${({ theme }) => theme.colors.bg}; */
     border-radius: 1rem;
 
     .card-data {
@@ -74,7 +74,7 @@ const Wrapper = styled.section`
     }
 
     .card-data--price {
-      color: ${({ theme }) => theme.colors.helper};
+      color: var(--primary);
     }
 
     h3 {

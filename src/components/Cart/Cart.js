@@ -45,7 +45,7 @@ const Cart = () => {
         <hr />
         <div className="cart-two-button">
           <NavLink to="/products">
-            <button className="btn btn-primary btn-lg"> continue Shopping </button>
+            <button className="btn btnPrimary btn-lg"> continue Shopping </button>
           </NavLink>
           <button className="btn btn-denger btn-lg" onClick={clearCart}>
             clear cart
